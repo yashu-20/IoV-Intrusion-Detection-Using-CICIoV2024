@@ -1,0 +1,33 @@
+name: IoV Intrusion Detection CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-train:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
+
+    - name: Run Unit Tests
+      run: pytest
+
+    - name: Run Original Data Pipeline
+      run: python Original_data.py
+
+    - name: Run Synthetic Data Pipeline
+      run: python Synthetic_data.py
