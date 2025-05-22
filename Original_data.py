@@ -19,12 +19,12 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 
 #Data Loading
-benign = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_benign.csv")
-dos = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_DoS.csv")
-spoofing_gas = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_spoofing-GAS.csv")
-spoofing_rpm = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_spoofing-RPM.csv")
-spoofing_speed = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_spoofing-SPEED.csv")
-spoofing_steering = pd.read_csv(r"C:\Users\yashu\Desktop\IoV Intrusion Detection\decimal\decimal_spoofing-STEERING_WHEEL.csv")
+benign = pd.read_csv("decimal/decimal_benign.csv")
+dos = pd.read_csv("decimal/decimal_DoS.csv")
+spoofing_gas = pd.read_csv("decimal/decimal_spoofing-GAS.csv")
+spoofing_rpm = pd.read_csv("decimal/decimal_spoofing-RPM.csv")
+spoofing_speed = pd.read_csv("decimal/decimal_spoofing-SPEED.csv")
+spoofing_steering = pd.read_csv("decimal/decimal_spoofing-STEERING_WHEEL.csv")
 
 benign['source'] = 'BENIGN'
 dos['source'] = 'DoS'
